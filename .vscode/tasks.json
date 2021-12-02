@@ -22,7 +22,8 @@
 			"description": "Which day of the 25 challenge days to run.",
 			"options": [
 				"1/index.ts",
-				"2/index.ts"
+				"2/index.ts",
+				"3/index.ts"
 			]
 		}
 	]
