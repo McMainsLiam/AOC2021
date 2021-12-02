@@ -1,4 +1,4 @@
-const text = await Deno.readTextFile("./input");
+const text = await Deno.readTextFile("1/input");
 const convertInputToNumbersList = (text: string) =>
   text.split("\n").map(Number);
 const numbers = convertInputToNumbersList(text);

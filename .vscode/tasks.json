@@ -1,0 +1,29 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "deno",
+			"command": "run",
+			"problemMatcher": [
+				"$deno"
+			],
+			"label": "deno: run",
+			"args": [
+				"--allow-read",
+				"${input:day}"
+			]
+		}
+	],
+	"inputs": [
+		{
+			"type": "pickString",
+			"id": "day",
+			"default": "1/index.ts",
+			"description": "Which day of the 25 challenge days to run.",
+			"options": [
+				"1/index.ts",
+				"2/index.ts"
+			]
+		}
+	]
+}

@@ -1,5 +1,5 @@
-const text = await Deno.readTextFile("./input");
+const text = await Deno.readTextFile("2/input");
 
-console.log(text);
+console.log("Day 2!");
 
 export {};
