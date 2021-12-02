@@ -1,3 +1,4 @@
-deno project
+A deno project
 
-run each challenge with `deno run --allow-read index.ts`
+Run each challenge with the VSCode task runner
+or manually from the root folder. Eg. `deno run --allow-read 1/index.ts`
