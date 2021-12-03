@@ -7,7 +7,7 @@ const range = (n: number) => [...Array(n).keys()];
 const convertToBinary = (n: string) => parseInt(n, 2);
 
 // Part 1
-const calcualteFrequencyOfOnes = (localRows: string[]) => {
+const calculateFrequencyOfOnes = (localRows: string[]) => {
   const counts: Record<number, number> = {};
 
   localRows.forEach((row) => {
@@ -20,7 +20,7 @@ const calcualteFrequencyOfOnes = (localRows: string[]) => {
   return counts;
 };
 
-const oneCounts = calcualteFrequencyOfOnes(rows);
+const oneCounts = calculateFrequencyOfOnes(rows);
 
 const gammaString = Object.values(oneCounts)
   .map((value) => (value < rows.length / 2 ? 0 : 1))
@@ -39,12 +39,12 @@ let finalOx = "0",
   finalCo2 = "0";
 
 range(rows[0].length).forEach((index) => {
-  const oneCountOx = calcualteFrequencyOfOnes(oxRows)[index];
+  const oneCountOx = calculateFrequencyOfOnes(oxRows)[index];
   const mostCommonValue = oneCountOx >= oxRows.length / 2 ? "1" : "0";
   oxRows = oxRows.filter((row) => row[index] === mostCommonValue);
   if (oxRows.length === 1) finalOx = oxRows[0];
 
-  const oneCountCo2 = calcualteFrequencyOfOnes(co2Rows)[index];
+  const oneCountCo2 = calculateFrequencyOfOnes(co2Rows)[index];
   const mostCommonValueCo2 = oneCountCo2 < co2Rows.length / 2 ? "1" : "0";
   co2Rows = co2Rows.filter((row) => row[index] === mostCommonValueCo2);
   if (co2Rows.length === 1) finalCo2 = co2Rows[0];
