@@ -23,7 +23,8 @@
 			"options": [
 				"1/index.ts",
 				"2/index.ts",
-				"3/index.ts"
+				"3/index.ts",
+				"4/index.ts",
 			]
 		}
 	]
