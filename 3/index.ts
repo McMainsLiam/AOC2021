@@ -40,8 +40,8 @@ let finalOx = "0",
 
 range(rows[0].length).forEach((index) => {
   const oneCountOx = calculateFrequencyOfOnes(oxRows)[index];
-  const mostCommonValue = oneCountOx >= oxRows.length / 2 ? "1" : "0";
-  oxRows = oxRows.filter((row) => row[index] === mostCommonValue);
+  const mostCommonValueOx = oneCountOx >= oxRows.length / 2 ? "1" : "0";
+  oxRows = oxRows.filter((row) => row[index] === mostCommonValueOx);
   if (oxRows.length === 1) finalOx = oxRows[0];
 
   const oneCountCo2 = calculateFrequencyOfOnes(co2Rows)[index];
