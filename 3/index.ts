@@ -4,7 +4,7 @@ const rows = text.split("\n");
 
 // Helpers
 const range = (n: number) => [...Array(n).keys()];
-const convertToBinary = (n: string) => parseInt(n, 2);
+const convertBinaryStringToNumber = (n: string) => parseInt(n, 2);
 
 // Part 1
 const calculateFrequencyOfOnes = (localRows: string[]) => {
@@ -29,7 +29,7 @@ const epsilonString = Object.values(oneCounts)
   .map((value) => (value > rows.length / 2 ? 0 : 1))
   .join("");
 
-console.log(convertToBinary(gammaString) * convertToBinary(epsilonString)); // 4118544
+console.log(convertBinaryStringToNumber(gammaString) * convertBinaryStringToNumber(epsilonString)); // 4118544
 
 // Part 2
 let oxRows = [...rows];
@@ -50,6 +50,6 @@ range(rows[0].length).forEach((index) => {
   if (co2Rows.length === 1) finalCo2 = co2Rows[0];
 });
 
-console.log(convertToBinary(finalCo2) * convertToBinary(finalOx)); // 3832770
+console.log(convertBinaryStringToNumber(finalCo2) * convertBinaryStringToNumber(finalOx)); // 3832770
 
 export {};
